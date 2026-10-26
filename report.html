@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التقرير الختامي الموثق للدرس النموذجي: انجراف القارات | ثانوية الفرسان الأهلية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/school_logo.png">
+
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --secondary-color: #8b3a88;
+      --accent-color: #8dc63f;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg-light: #f9fafb;
+      --border-color: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Cairo', system-ui, sans-serif;
+      background: #f3f4f6;
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 30px 15px;
+    }
+
+    .report-paper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      padding: 45px 50px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Official Ministry Header */
+    .official-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+    .official-branch {
+      text-align: right;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #374151;
+      line-height: 1.5;
+    }
+    .official-logo-center {
+      text-align: center;
+    }
+    .official-logo-center img {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+    }
+    .official-vision {
+      text-align: left;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #6b7280;
+    }
+
+    .report-title-box {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.06), rgba(141, 198, 63, 0.08));
+      border: 1px solid rgba(79, 70, 229, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 35px;
+    }
+    .report-title-box h1 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #1e1b4b;
+      margin-bottom: 6px;
+    }
+    .report-title-box p {
+      color: #6b7280;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* Metadata Table */
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    .meta-table th, .meta-table td {
+      border: 1px solid #e5e7eb;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+    }
+    .meta-table th {
+      background: #f8fafc;
+      color: #1e293b;
+      font-weight: 800;
+      width: 25%;
+    }
+    .meta-table td {
+      color: #334155;
+      font-weight: 600;
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1e1b4b;
+      border-right: 4px solid var(--primary-color);
+      padding-right: 12px;
+      margin: 30px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .stat-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary-color);
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #64748b;
+    }
+
+    /* Photo Documentation Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 20px 0 35px;
+    }
+    @media (max-width: 650px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+    .gallery-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-caption {
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #334155;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    /* Signatures */
+    .signatures-box {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+      padding-top: 25px;
+      border-top: 2px dashed #e2e8f0;
+      text-align: center;
+    }
+    .sig-role {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #1e1b4b;
+      margin-bottom: 8px;
+    }
+    .sig-name {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--primary-color);
+    }
+
+    /* Action Buttons (Screen only) */
+    .action-bar {
+      text-align: center;
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-print { background: #4f46e5; color: white; }
+    .btn-back { background: #ffffff; color: #374151; border: 1px solid #d1d5db; }
+
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .report-paper { box-shadow: none; border: none; padding: 0; max-width: 100%; }
+      .action-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="report-paper">
+    <!-- Official Header -->
+    <div class="official-header">
+      <div class="official-branch">
+        المملكة العربية السعودية<br>
+        وزارة التعليم<br>
+        الإدارة العامة للتعليم بمنطقة مكة المكرمة<br>
+        <strong>ثانوية الفرسان الأهلية</strong>
+      </div>
+      <div class="official-logo-center">
+        <img src="images/school_logo.png" alt="شعار مدارس الفرسان الأهلية">
+      </div>
+      <div class="official-vision">
+        رؤية المملكة 2030<br>
+        نظام المسارات التخصصي<br>
+        العام الدراسي 1448هـ / 2026م
+      </div>
+    </div>
+
+    <!-- Title Box -->
+    <div class="report-title-box">
+      <h1>التقرير الختامي الموثق للدرس النموذجي التفاعلي</h1>
+      <p>درس: انجراف القارات (Continental Drift) • مادة علم الأرض والفضاء</p>
+    </div>
+
+    <!-- Table Info -->
+    <table class="meta-table">
+      <tr>
+        <th>المدرسة</th>
+        <td>ثانوية الفرسان الأهلية بمكة المكرمة</td>
+        <th>المادة الدراسية</th>
+        <td>علم الأرض والفضاء (مسارات)</td>
+      </tr>
+      <tr>
+        <th>معلم المادة</th>
+        <td>أ. أيمن البنا</td>
+        <th>مدير المدرسة</th>
+        <td>أ. محسن ردة الله الصاعدي</td>
+      </tr>
+      <tr>
+        <th>الفصل والمرحلة</th>
+        <td>فصل 308 — مسار علوم الحاسب والهندسة (الثالث ثانوي)</td>
+        <th>طبيعة الدرس</th>
+        <td>درس نموذجي تطبيقي فائق التفاعلية (Single Page Web App)</td>
+      </tr>
+    </table>
+
+    <!-- Key Statistics -->
+    <div class="section-title">📊 مؤشرات الإنجاز والأداء الصفي</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">نسبة تحقق الأهداف</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">12</div>
+        <div class="stat-label">وحدة تفاعلية ومحاكاة</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">22+</div>
+        <div class="stat-label">صورة حقيقية من ناسا والأرض</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">تفاعل ومشاركة الطلاب</div>
+      </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="section-title">📝 الملخص التنفيذي ومخرجات التعلم</div>
+    <p style="color: #4b5563; font-size: 0.95rem; margin-bottom: 15px;">
+      تم بحمد الله وتوفيقه تنفيذ الدرس النموذجي الرقمي لمادة <strong>علم الأرض والفضاء</strong> لطلاب <strong>فصل 308 (مسار علوم الحاسب والهندسة)</strong> باستخدام منصة تعليمية ويب متكاملة ومصممة وفق أحدث معايير التصميم الزجاجي العصري (Glassmorphism). اشتمل الدرس على محاكاة فيزيائية لحركة قارة بانجيا منذ 250 مليون سنة وحتى العصر الحالي، واستعراض الأدلة الأربعة للعالم ألفريد فيجنر، بالإضافة إلى أنشطة السحب والإفلات التفاعلية، ومعجم المصطلحات الصوتي، ومسابقات التحدي المعرفي التنافسية.
+    </p>
+
+    <!-- Photographic Documentation Gallery -->
+    <div class="section-title">📷 التوثيق المصور للبراهين الجيولوجية الميدانية</div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/earth/apollo17_earth.jpg" alt="Apollo 17 Earth">
+        <div class="gallery-caption">كوكب الأرض من الفضاء (NASA Apollo 17) وتطابق السواحل</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/fossils/mesosaurus_fossil.jpg" alt="Mesosaurus Fossil">
+        <div class="gallery-caption">أحفورة الميسوسورس الحقيقية المشتركة بين البرازيل وجنوب إفريقيا</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/geology/appalachian_mountains.jpg" alt="Appalachian Mountains">
+        <div class="gallery-caption">طيات جبال الأبالاش المتطابقة جيولوجياً مع جبال إسكتلندا</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/geology/glacial_striations.jpg" alt="Glacial Striations">
+        <div class="gallery-caption">أخاديد التخدد الجليدي في صخور مناطق استوائية (المناخ القديم)</div>
+      </div>
+    </div>
+
+    <!-- Signatures -->
+    <div class="signatures-box">
+      <div>
+        <div class="sig-role">معلم المادة</div>
+        <div class="sig-name">أ. أيمن البنا</div>
+        <div style="font-size: 0.82rem; color: #9ca3af; margin-top: 15px;">التوقيع: ..........................</div>
+      </div>
+      <div>
+        <div class="sig-role">مدير المدرسة</div>
+        <div class="sig-name">أ. محسن ردة الله الصاعدي</div>
+        <div style="font-size: 0.82rem; color: #9ca3af; margin-top: 15px;">الختم والتوقيع: ..........................</div>
+      </div>
+    </div>
+
+    <!-- Actions for Screen -->
+    <div class="action-bar">
+      <button class="btn btn-print" onclick="window.print()">🖨️ طباعة التقرير أو حفظ كـ PDF</button>
+      <a href="index.html" class="btn btn-back">➔ العودة للتطبيق التفاعلي</a>
+    </div>
+  </div>
+
+</body>
+</html>
