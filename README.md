@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/school_logo.png" alt="World Space Week Portal" width="180" />
+  <img src="school_logo.png" alt="World Space Week Portal" width="180" />
 </p>
 
 <h1 align="center" id="arabic">بوابة درس انجراف القارات | ثانوية الفرسان الأهلية</h1>
